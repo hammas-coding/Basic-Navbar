@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #2c3e50;
+}
+
+nav {
+    background-color: #0082e6;
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+span{
+   color: #000000;
+}
+
+ul {
+    float: right;
+    margin-right: 20px;
+}
+
+li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+a:hover{
+    font-size: 20px;
+}
+
+.check-btn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 10px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* media queries */
+@media(max-width:952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 40px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:858px) {
+    .check-btn {
+        display: block;
+        margin-top: 25px;
+        line-height: 20px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        left: -100%;
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    li {
+        display: block;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0%;
+    }
+}
